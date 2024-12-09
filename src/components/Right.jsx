@@ -21,7 +21,7 @@ const Right = () => {
               Please enter the 6 digit code we just sent to s*********a@xyz.com
             </p>
           </div>
-          <form action="">
+          <form action="" method="post">
             <div className="inputs">
               <input type="number" maxLength="1" className="otp-input" />
               <input type="number" maxLength="1" className="otp-input" />
