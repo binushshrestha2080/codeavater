@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Right = () => {
   const navigate = useNavigate();
 
-  const handleVerify = () => {
+  const handleVerify = (e) => {
+    e.preventDefault();
     navigate("/form");
   };
 
@@ -21,7 +22,7 @@ const Right = () => {
               Please enter the 6 digit code we just sent to s*********a@xyz.com
             </p>
           </div>
-          <form action="" method="post">
+          <form onSubmit={handleVerify}>
             <div className="inputs">
               <input type="number" maxLength="1" className="otp-input" />
               <input type="number" maxLength="1" className="otp-input" />
@@ -32,7 +33,7 @@ const Right = () => {
               <input type="number" maxLength="1" className="otp-input" />
             </div>
             <div className="button">
-              <button onClick={handleVerify}>Verify</button>
+              <button>Verify</button>
               <p>Wait 1:39 seconds before requesting a new code.</p>
             </div>
           </form>
